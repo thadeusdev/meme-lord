@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import MemeGenerator from './MemeGenerator'
 import LoginForm from './LoginForm'
 
 function User() {
@@ -31,11 +32,12 @@ function User() {
     }
 
   return (
-    <div>User
+    <div>
         {(user.email !== '') ? (
             <div className='welcome'>
                 <h2>Welcome, <span>{user.name}</span></h2>
                 <button onClick={Logout}>Logout</button>
+                <MemeGenerator />
             </div>
         ) : (
           <LoginForm Login={Login} error={error} />  
