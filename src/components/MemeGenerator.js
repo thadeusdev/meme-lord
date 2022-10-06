@@ -42,7 +42,7 @@ class MemeGenerator extends Component{
     render(){
         return (
             <div>
-                <form className='meme-form' onSubmit={this.handleSubmit}>
+                <form className='meme-form' onClick={this.handleSubmit}>
                     <label>Top Text: </label>
                     <input
                         type='text'
@@ -64,6 +64,7 @@ class MemeGenerator extends Component{
                     <h2 className='top'>{this.state.topText}</h2>
                     <h2 className='bottom'>{this.state.bottomText}</h2>
                 </div>
+                <div></div>
             </div>            
         )
     }
